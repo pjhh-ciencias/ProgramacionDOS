@@ -12,9 +12,10 @@
 
 
     <!-- This part is to load main.js -->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../main.js"></script>
 
     
+
 
     <!-- Next part is for new coomands -->
     <script>
@@ -22,22 +23,36 @@
         tex: {
           macros: {
             sen: "\\operatorname{sen}",
-            seg: ["\\overrightarrow{#1}", 1]
-          }
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
         }
       };
     </script>
 
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title{
+        counter-reset: sectionCounter 1 subsectioncounter ;
+      } */
+      h1.page-title-practica{
+        counter-reset: semanaCounter 1 sectionCounter  subsectionCounter;
+      }
+    </style>
+
     <!-- CSS -->
 
-    <link rel="stylesheet" , href="style.css" />
+    <link rel="stylesheet" , href="../style.css" />
     <!-- Top Menu  -->
     
           
         <header class="main-header">
         
           <div class="logo_superior_umar">
-          <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
           </div>
           <div class="contenedor_titulo">
             <div class="title">Programación II</div>
@@ -53,13 +68,15 @@
         <nav class="top-nav">
           <ul>
             <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Home.html"> Inicio  </a> </li>
-            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Informacion_General.html"> Información</a> </li>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Informacion_General.html"> Información </a> </li>
             <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Notas.html"> Notas  </a> </li>
             <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Quizes.html"> Quizes  </a> </li>
             <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Practicas.html">Prácticas</a> </li>
             <li> <a href="https://pjhh-ciencias.github.io/ProgramacionDOS/Enlaces_externos.html"> Links </a> </li>
           </ul>
           </nav>
+       
+        
         <!-- 
           <nav class="small-nav" align=right>
             <button onclick="myFunction()">Claro/Obscuro 
@@ -68,15 +85,25 @@
 
       <!-- This part is for title in tab-->
             
-      <title>Prácticas</title>
+      <title>Práctica 1 </title>
       </head>  
-  
-    <body class="fondo-body" > <h1 class="page-title"> Prácticas</h1>  
 
-    <div class="links-box" style = "font-family: 'Oldenburg', cursive;">
-      <a  href="" target="_blank" > Prácticas 1</a>
-      <!-- <a  href="https://github.com/pjhh-ciencias/ProgramacionDOS/blob/main/Practicas/P2.ipynb" target="_blank" > Prácticas 2</a>
-      <a  href="https://github.com/pjhh-ciencias/ProgramacionDOS/blob/main/Practicas/P3.ipynb" target="_blank" > Prácticas 3</a> -->
-    </div>   
-  </body>
-</html>
+
+
+  <body class="fondo-body" ><h1 class="page-title-practica"> Prácticas 1 </h1>   
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>
+      </p>
+
+      <!-- <p><b>Sugerencia:</b>  <code>math.pi</code>. -->
+      </p>
+    </div>
+
+</body>
